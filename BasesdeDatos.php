@@ -6,7 +6,7 @@
 	</head>
 	<body>
 		<?php
-			$conexion=mysqli_connect("localhost", "root", "", "1718_tienda");
+			$conexion=mysqli_connect("localhost", "root", "proyecto1_bis", "1718_proyecte_1.sql");
 			if(!$conexion){
 			    echo "Error: No se pudo conectar a MySQL." . PHP_EOL;
 			    echo "errno de depuración: " . mysqli_connect_errno() . PHP_EOL;

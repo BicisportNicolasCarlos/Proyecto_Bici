@@ -201,27 +201,49 @@
     
 
     <!-- / BUTTON NAVIGATION -->
-    <div class="tab-content row">
-
+    
   
-
-
-
-    <br><br><form name="f1" action="171016_exercici22.php" method="GET">
-               Atun :<input type="text" name="p_max" ><br/>
-               Atun :<input type="text" name="p_max" ><br/>
-               Atun :<input type="text" name="p_max" /><br/>
-               Atun :<input type="text" name="p_max" /><br/>
-               Atun :<input type="text" name="p_max" /><br/>
-
-                <input type="submit" value="Enviar"/>
-        </form>
-
         <!-- /carousel control nav direction -->
 
        
 
                 </div>
+          <style>
+
+#izquierda {
+float:left;
+width: 500px;
+}
+
+#derecha {
+float:left;
+width:500px;
+background:#fc0;
+}
+
+</style>
+
+<div id="izquierda">
+<br><form name="f1" action="BasesdeDatos.php" method="GET">
+              <P ALIGN="left">
+               NOMBRE :<input type="text" name="p_max" ><br/>
+               MARCA :<input type="text" name="p_max" ><br/>
+               COLOR :<input type="text" name="p_max" /><br/>
+               IDENTIFICADOR :<input type="text" name="p_max" /><br/>
+              LUGAR DE PÉRDIDA/ROBO :<br /> 
+   <select name="programa">    
+       <option value="Gornaal" selected="selected">Gornal</option>
+       <option value="Bellvitge">Bellvitge</option>
+       <option value="St Andreu">St Andreu</option>
+   </select>
+           </p>
+                <p align="left"><input type="submit" value="BUSCAR"/>
+        </form>
+
+
+</div>
+
+<div id="derecha"><img src="images/foto29.jpg"> </div>
 
             </div>
         </div>
