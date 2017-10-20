@@ -38,7 +38,7 @@
 				}
 
 			} else {
-				echo "No hay bicicletas que mostrar";
+				echo "No hay bicicletas que mostrar.";
 			}
 
 
