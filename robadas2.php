@@ -212,41 +212,65 @@
 
 #izquierda {
 float:left;
-width: 500px;
 }
 
-#derecha {
-float:left;
-width:500px;
 
-}
 
 </style>
 
 <div id="izquierda">
-        <form name="f1" action="robadas2.php" method="GET">
-                <b>*Ubicación:</b> <input type="text" name="ubi" size="50"/><br/>
-                <b>*Marca:</b> <input type="text" name="marca" size="50"/><br/>
-                <b>*Color:</b> <input type="text" name="color" size="50"/><br/>
-                <b>Fecha robo:</b> <input type="date" name="data" size="50"/><br/>
-                <input type="submit" value="Enviar"/>
-        </form>
-
-</div>
-
-<div id="derecha">
-    <p>
-        * Campo obligatorio
-    </p>    
+    <table width="70%" border="1px" align="left">
+         <tr align="center">
+            <td><b>Fecha robo:</b></td>
+            <td><b>Ubicacion:</b></td>
+            <td><b>Marca:</b></td>
+            <td><b>Color:</b></td>
+            <td><b>Foto:</b></td>
+    </tr>
+        <?php
+            $conexion=mysqli_connect("localhost", "root", "", "proyecto1_bis");
 
 
+            if($_REQUEST['ubi']!=""){
+                    $q = "SELECT * FROM anunci WHERE anu_ubicacio_robatori LIKE '%$_REQUEST[ubi]%' AND anu_marca LIKE '%$_REQUEST[marca]%' AND anu_color LIKE '$_REQUEST[color]%' AND anu_data_robatori LIKE '%$_REQUEST[data]%' ORDER BY anu_data_robatori";
+            } else {
+                    $q = "SELECT * FROM anunci ORDER BY anu_data_robatori";
+            }
 
-    <img src="images/foto29.jpg"> </div>
+            "$q<br/>";
 
-            </div>
-        </div>
+            $consulta = mysqli_query($conexion, $q);
 
-    </div>
+            if(mysqli_num_rows($consulta)){
+                $a_anunci = mysqli_num_rows($consulta);
+                "Ubicacion: $_REQUEST[ubi]<br/><br/>";
+                "Marca: $_REQUEST[marca]<br/><br/>";
+                "Color: $_REQUEST[color]<br/><br/>";
+                "Fecha robo: $_REQUEST[data]<br/><br/>";
+                "mostrar $a_anunci<br/><br/>";
+
+                while($anunci=mysqli_fetch_array($consulta)){
+                    echo "<tr>";
+                    echo "<div style='width: 500px; float: left;'>";
+                    echo "<td>$anunci[anu_data_robatori]</td>";
+                    echo "<td>$anunci[anu_ubicacio_robatori]</td>";
+                    echo "<td>$anunci[anu_marca]</td>";
+                    echo "<td>$anunci[anu_color]</td>";
+                    echo "<td>$anunci[anu_foto]</td>";
+                    echo "</div>";
+                    echo "</tr>";
+                }
+
+            } else {
+                echo "<b>NO HAY BICICLETAS QUE MOSTRAR<b>";
+            }
+
+
+        ?>
+        <br/><br/>
+        <td><b><a href="robadas.html">VOLVER</a></b></td>
+        </table>
+
 </div>
 <!-- /our clients -->
 
