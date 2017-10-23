@@ -263,29 +263,14 @@ tr.1{
 
             
             $conexion=mysqli_connect("localhost", "root", "", "proyecto_bis1");  
-            mysqli_query ($conexion, "SET NAMES 'utf8'");
+             mysqli_query ($conexion, "SET NAMES 'utf8'");
 
-
-
-            if($_REQUEST['ubi']!=""){
-                    $q = "SELECT * FROM anunci WHERE anu_ubicacio_robatori LIKE '%$_REQUEST[ubi]%' AND anu_marca LIKE '%$_REQUEST[marca]%' AND anu_color LIKE '$_REQUEST[color]%' AND anu_data_robatori LIKE '%$_REQUEST[data]%' ORDER BY anu_data_robatori";
-            } else {
-                    $q = "SELECT * FROM anunci ORDER BY anu_data_robatori";
-            }
+                    $q = "SELECT * FROM anunci ORDER BY anu_data_robatori DESC" ;
+           
 
             "$q<br/>";
 
             $consulta = mysqli_query($conexion, $q);
-
-            if(mysqli_num_rows($consulta)){
-                $a_anunci = mysqli_num_rows($consulta);
-                "Ubicacion: $_REQUEST[ubi]<br/><br/>";
-                "Marca: $_REQUEST[marca]<br/><br/>";
-                "Color: $_REQUEST[color]<br/><br/>";
-                "Fecha robo: $_REQUEST[data]<br/><br/>";
-                "mostrar $a_anunci<br/><br/>";
-
-                
 
                 while($anunci=mysqli_fetch_array($consulta)){
                     echo "<tr>";
@@ -299,9 +284,7 @@ tr.1{
                     echo "</tr>";
                 }
 
-            } else {
-                echo "<b>NO HAY BICICLETAS QUE MOSTRAR<b>";
-            }
+          
 
 
         ?>

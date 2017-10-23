@@ -7,6 +7,7 @@
     <meta charset="UTF-8">
     <title>Bicisport | Bicicletas, accesorios y recambios</title>
     <meta name="description" content="Venta de bicicletas, accesorios y complementos para el ciclista. Taller de reparación. Tienda física en Barcelona y venta online.">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -36,6 +37,38 @@
     <script src="js\app.js"></script>
     </head>
 <body>
+<style type="text/css">
+
+div.izqui {
+
+    background-color: #85807F;
+    width: 500px;
+    float:left;
+    border-color: black;
+    border-right-style: double;
+    border-top-style: double;
+    border-right-style: double;
+    border-bottom-style: double;
+    border-left-style: double;
+}
+div.der {
+
+    background-color: none;
+    width: 600px;
+    float:left;
+}
+
+font.stroke {
+text-align: center;
+color: #FCDB00;
+font-family: impact;
+font-size: 20px;
+text-shadow: -1px -1px 1px #000, 1px 1px 1px #000, -1px 1px 1px #000, 1px -1px 1px #000;
+-webkit-text-fill-color: #FCDB00;
+-webkit-text-stroke: 0.5px black;
+}
+
+</style>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
@@ -208,69 +241,31 @@
        
 
                 </div>
-<style type="text/css">
 
-div.izqui {
-
-    background-color: #85807F;
-    width: 500px;
-    float:left;
-    border-color: black;
-    border-right-style: double;
-    border-top-style: double;
-    border-right-style: double;
-    border-bottom-style: double;
-    border-left-style: double;
-}
-div.der {
-
-    background-color: none;
-    width: 600px;
-    float:left;
-}
-
-font.stroke {
-text-align: center;
-color: #FCDB00;
-font-family: impact;
-font-size: 23px;
-text-shadow: -1px -1px 1px #000, 1px 1px 1px #000, -1px 1px 1px #000, 1px -1px 1px #000;
--webkit-text-fill-color: #FCDB00;
--webkit-text-stroke: 0.5px black;
-}
-
-</style>
 
 <div class="izqui">
 
         <form name="f1" action="robadas2.php" method="GET">
-                <font class="stroke" color="yellow" border="black"><p align="center"><b>*Ubicación:</b> <input type="text" name="ubi" size="30"/><br/>
-                <b>*Marca:</b> <input type="text" name="marca" size="30"/><br/>
-                <b>*Color:</b> <input class="1" type="text" name="color" size="30"/><br/>
+                <font class="stroke" color="yellow" border="black"><p align="center"><b>*Ubicación:</b> <input type="text" name="ubi" size="30" required=""/><br/>
+                <b>Marca:</b> <input type="text" name="marca" size="30" required=""/><br/>
+                <b>Color:</b> <input class="1" type="text" name="color" size="30"/><br/>
                 <b>Fecha robo:</b> <input type="date" name="data" size="30"/><br/>
                 <input type="submit" type="text/css" value="Enviar"/></p></font>
-
         </form>
+        <form name="f2" action="robadas3.php" method="GET">
+         <input type="submit" type="text/css" value="Ver todas"/></p></font>
 
 </div>
 
 <div class="der">
-    <p>
-        * Campo obligatorioou
-    </p>    
+
 
 
 
     <img src="images/foto29.jpg"> </div>
 
             </div>
-        </div>
 
-    </div>
-</div>
-<!-- /our clients -->
-
-    </div>
 
 <!-- /SITE CONTENT -->
 
