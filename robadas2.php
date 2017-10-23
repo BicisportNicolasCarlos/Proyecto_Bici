@@ -143,7 +143,7 @@ tr.1{
     <li><a href="contacto.html">Contacto</a></li>
     <li><a href="http://www.cbicisport.com" target="_blank">Club</a></li>
     <li><a href="http://crm.bicisport.es" target="_blank">Área clientes</a></li>    
-    <li><a href="robadas.html" target="_blank">Bicicletas robadas</a></li>
+    <li><a href="robadas.html">Bicicletas robadas</a></li>
 </ul>
 <!-- /main menu -->
 
@@ -261,7 +261,7 @@ tr.1{
     </tr></font>
         <?php
 
-            
+    
             $conexion=mysqli_connect("localhost", "root", "", "proyecto_bis1");  
             mysqli_query ($conexion, "SET NAMES 'utf8'");
 
