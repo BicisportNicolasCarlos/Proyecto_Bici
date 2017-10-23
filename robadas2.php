@@ -219,7 +219,7 @@ float:left;
 </style>
 
 <div id="izquierda">
-    <table width="70%" border="1px" align="left">
+    <table width="70%" border="5px" align="center" border-color="red">
          <tr align="center">
             <td><b>Fecha robo:</b></td>
             <td><b>Ubicacion:</b></td>
@@ -228,7 +228,7 @@ float:left;
             <td><b>Foto:</b></td>
     </tr>
         <?php
-            $conexion=mysqli_connect("localhost", "root", "", "proyecto1_bis");
+            $conexion=mysqli_connect("localhost", "root", "", "proyecto1_bis");         
 
 
             if($_REQUEST['ubi']!=""){
@@ -248,6 +248,8 @@ float:left;
                 "Color: $_REQUEST[color]<br/><br/>";
                 "Fecha robo: $_REQUEST[data]<br/><br/>";
                 "mostrar $a_anunci<br/><br/>";
+
+                
 
                 while($anunci=mysqli_fetch_array($consulta)){
                     echo "<tr>";

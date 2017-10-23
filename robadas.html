@@ -208,35 +208,55 @@
        
 
                 </div>
-          <style>
+<style type="text/css">
 
-#izquierda {
-float:left;
-width: 500px;
+div.izqui {
+
+    background-color: #85807F;
+    width: 500px;
+    float:left;
+    border-color: black;
+    border-right-style: double;
+    border-top-style: double;
+    border-right-style: double;
+    border-bottom-style: double;
+    border-left-style: double;
+}
+div.der {
+
+    background-color: none;
+    width: 600px;
+    float:left;
 }
 
-#derecha {
-float:left;
-width:500px;
-
+font.stroke {
+text-align: center;
+color: #FCDB00;
+font-family: impact;
+font-size: 23px;
+text-shadow: -1px -1px 1px #000, 1px 1px 1px #000, -1px 1px 1px #000, 1px -1px 1px #000;
+-webkit-text-fill-color: #FCDB00;
+-webkit-text-stroke: 0.5px black;
 }
 
 </style>
 
-<div id="izquierda">
+<div class="izqui">
+
         <form name="f1" action="robadas2.php" method="GET">
-                <b>*Ubicación:</b> <input type="text" name="ubi" size="50"/><br/>
-                <b>*Marca:</b> <input type="text" name="marca" size="50"/><br/>
-                <b>*Color:</b> <input type="text" name="color" size="50"/><br/>
-                <b>Fecha robo:</b> <input type="date" name="data" size="50"/><br/>
-                <input type="submit" value="Enviar"/>
+                <font class="stroke" color="yellow" border="black"><p align="center"><b>*Ubicación:</b> <input type="text" name="ubi" size="30"/><br/>
+                <b>*Marca:</b> <input type="text" name="marca" size="30"/><br/>
+                <b>*Color:</b> <input class="1" type="text" name="color" size="30"/><br/>
+                <b>Fecha robo:</b> <input type="date" name="data" size="30"/><br/>
+                <input type="submit" type="text/css" value="Enviar"/></p></font>
+
         </form>
 
 </div>
 
-<div id="derecha">
+<div class="der">
     <p>
-        * Campo obligatorio
+        * Campo obligatorioou
     </p>    
 
 
