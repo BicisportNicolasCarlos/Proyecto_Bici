@@ -258,6 +258,7 @@ tr.1{
             <td><b>Marca:</b></td>
             <td><b>Color:</b></td>
             <td><b>Foto:</b></td>
+            <td><b>Contacto:</b></td>
     </tr></font>
         <?php
 
@@ -280,6 +281,7 @@ tr.1{
                     echo "<td>$anunci[anu_marca]</td>";
                     echo "<td>$anunci[anu_color]</td>";
                     echo "<td>$anunci[anu_foto]</td>";
+                    echo "<td>$anunci[anu_numero_serie]</td>";
                     echo "</div>";
                     echo "</tr>";
                 }
