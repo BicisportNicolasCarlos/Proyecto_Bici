@@ -268,9 +268,9 @@ tr.1{
 
 
             if($_REQUEST['ubi']!=""){
-                    $q = "SELECT * FROM anunci WHERE anu_ubicacio_robatori LIKE '%$_REQUEST[ubi]%' AND anu_marca LIKE '%$_REQUEST[marca]%' AND anu_color LIKE '$_REQUEST[color]%' AND anu_data_robatori LIKE '%$_REQUEST[data]%' ORDER BY anu_data_robatori";
+                    $q = "SELECT * FROM anunci WHERE anu_ubicacio_robatori LIKE '%$_REQUEST[ubi]%' AND anu_marca LIKE '%$_REQUEST[marca]%' AND anu_color LIKE '$_REQUEST[color]%' AND anu_data_robatori LIKE '%$_REQUEST[data]%' ORDER BY anu_data_robatori DESC";
             } else {
-                    $q = "SELECT * FROM anunci ORDER BY anu_data_robatori";
+                    $q = "SELECT * FROM anunci ORDER BY anu_data_robatori DESC" ;
             }
 
             "$q<br/>";
